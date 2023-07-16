@@ -3,16 +3,9 @@ import { NAVIGATION } from "@/const/navigation";
 
 export const Navigation = () => {
   return (
-    <nav>
+    <Box as="nav" pos="sticky" top="0" flexShrink="0" h="80vh" overflowY="scroll">
       {/* <Flex align="center" justify="center" gap="20px"> */}
-      <VStack
-        w="280px"
-        h="100vh"
-        p={6}
-        align="left"
-        lineHeight="9"
-        overflowY="scroll"
-      >
+      <VStack w="280px" p={6} align="left" lineHeight="9">
         {NAVIGATION.map((nav) => (
           <Box key={nav.CHAPTER}>
             <Text fontSize="md" fontWeight="bold" color="gray.800">
@@ -28,6 +21,6 @@ export const Navigation = () => {
       </VStack>
       {/* <Divider orientation="vertical" height='70vh' /> */}
       {/* </Flex> */}
-    </nav>
+    </Box>
   );
 };

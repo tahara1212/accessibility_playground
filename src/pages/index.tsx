@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { Box, VStack, Text, Divider, Flex, Heading } from "@chakra-ui/react";
+import { Box, VStack, Text, Divider, Flex, Heading, calc } from "@chakra-ui/react";
 import { NAVIGATION } from "@/const/navigation";
 import { Navigation } from "@/components/elements/navigation";
 import { Header } from "@/components/elements/header";
@@ -18,14 +18,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className={`${styles.main} ${inter.className}`}>
-        <Flex align="center" justify="center" gap="20px">
+      <Box as="main" maxW="1440px" marginX="auto" h="100vh">
+        <Flex align="start" justify="center" p={14} gap="20px">
           <Navigation />
-          <Box bgColor="red.200" w="860px">
+          <Box bgColor="red.200" w="860px" h="3000px">
             test
           </Box>
         </Flex>
-      </main>
+      </Box>
     </>
   );
 }
