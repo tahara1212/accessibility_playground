@@ -2,7 +2,7 @@ import { Box, Flex, Heading } from "@chakra-ui/react";
 
 export const Header = () => {
   return (
-    <Box as="header" w="100%" h="50px" bgColor="gray.600">
+    <Box as="header" pos="sticky" top="0" w="100%" h="50px" bgColor="gray.600">
       <Flex
         w="100%"
         h="100%"

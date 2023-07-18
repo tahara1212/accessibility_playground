@@ -5,6 +5,7 @@ import { Box, VStack, Text, Divider, Flex, Heading, calc } from "@chakra-ui/reac
 import { NAVIGATION } from "@/const/navigation";
 import { Navigation } from "@/components/elements/navigation";
 import { Header } from "@/components/elements/header";
+import { HEADER_HEIGHT } from "@/const/util";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Box as="main" maxW="1440px" marginX="auto" h="100vh">
+      <Box as="main" maxW="1440px" marginX="auto" h={`calc(100vh - 50px)`}>
         <Flex align="start" justify="center" p={14} gap="20px">
           <Navigation />
           <Box bgColor="red.200" w="860px" h="3000px">

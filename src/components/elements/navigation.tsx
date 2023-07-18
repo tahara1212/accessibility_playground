@@ -1,9 +1,10 @@
 import { Box, VStack, Text, Divider, Flex } from "@chakra-ui/react";
 import { NAVIGATION } from "@/const/navigation";
+import { HEADER_HEIGHT } from "@/const/util";
 
 export const Navigation = () => {
   return (
-    <Box as="nav" pos="sticky" top="0" flexShrink="0" h="80vh" overflowY="scroll">
+    <Box as="nav" pos="sticky" top={HEADER_HEIGHT} flexShrink="0" h="80vh" overflowY="scroll">
       {/* <Flex align="center" justify="center" gap="20px"> */}
       <VStack w="280px" p={6} align="left" lineHeight="9">
         {NAVIGATION.map((nav) => (
