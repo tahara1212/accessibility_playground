@@ -28,7 +28,7 @@ export const NAVIGATION = [
     ],
   },
   {
-    CHAPTER: "Webアクセシビリティの基礎",
+    CHAPTER: "フォームの改善",
     LIST: [
       {
         TITLE: "基礎となるマシンリーダブルを理解する",
@@ -42,7 +42,7 @@ export const NAVIGATION = [
     ],
   },
   {
-    CHAPTER: "Webアクセシビリティの基礎",
+    CHAPTER: "UIデザインの改善",
     LIST: [
       {
         TITLE: "基礎となるマシンリーダブルを理解する",
@@ -56,7 +56,7 @@ export const NAVIGATION = [
     ],
   },
   {
-    CHAPTER: "Webアクセシビリティの基礎",
+    CHAPTER: "複雑なUIパターンの改善",
     LIST: [
       {
         TITLE: "基礎となるマシンリーダブルを理解する",
@@ -70,7 +70,7 @@ export const NAVIGATION = [
     ],
   },
   {
-    CHAPTER: "Webアクセシビリティの基礎",
+    CHAPTER: "デザインシステムとアクセシビリティ",
     LIST: [
       {
         TITLE: "基礎となるマシンリーダブルを理解する",
@@ -84,7 +84,7 @@ export const NAVIGATION = [
     ],
   },
   {
-    CHAPTER: "Webアクセシビリティの基礎",
+    CHAPTER: "アクセシビリティの組織導入",
     LIST: [
       {
         TITLE: "基礎となるマシンリーダブルを理解する",
@@ -98,7 +98,7 @@ export const NAVIGATION = [
     ],
   },
   {
-    CHAPTER: "Webアクセシビリティの基礎",
+    CHAPTER: "アクセシブルなUI設計の原理を導く",
     LIST: [
       {
         TITLE: "基礎となるマシンリーダブルを理解する",
