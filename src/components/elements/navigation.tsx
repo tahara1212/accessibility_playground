@@ -1,4 +1,5 @@
-import { Box, VStack, Text, Divider, Flex } from "@chakra-ui/react";
+import NextLink from 'next/link'
+import { Box, VStack, Text, Divider, Flex, Link } from "@chakra-ui/react";
 import { NAVIGATION } from "@/const/navigation";
 import { HEADER_HEIGHT } from "@/const/util";
 import { useState } from "react";
@@ -36,29 +37,21 @@ export const Navigation = () => {
                 color={openList[i] ? "white" : "gray.800"}
                 cursor="pointer"
                 _hover={{ color: "whiteAlpha.800" }}
-                // _after={{
-                //   content: '""',
-                //   display: "inline-block",
-                //   bgImage: "url('/arrow.svg')",
-                //   w: "2em",
-                //   h: "2em",
-                //   color: openList[i] ? "white" : "gray.800",
-                //   transform: openList[i] ? "rotate(-90deg)" : "rotate(90deg)",
-                // }}
                 onClick={() => onClickNavBtn(i)}
               >
                 {nav.CHAPTER}
               </Flex>
               {openList[i] &&
                 nav.LIST.map((list) => (
-                  <Text
-                    key={list.TITLE}
-                    pl={2}
-                    fontSize="sm"
-                    color={openList[i] ? "white" : "gray.800"}
-                  >
-                    {list.TITLE}
-                  </Text>
+                  <Link as={NextLink} key={list.TITLE} href={`/article/${list.LINK}`} _hover={{ opacity: "0.6", textDecoration: "none" }}>
+                    <Text
+                      pl={2}
+                      fontSize="sm"
+                      color={openList[i] ? "white" : "gray.800"}
+                    >
+                      {list.TITLE}
+                    </Text>
+                  </Link>
                 ))}
             </Box>
           ))}

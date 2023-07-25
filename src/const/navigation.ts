@@ -4,9 +4,11 @@ export const NAVIGATION = [
     LIST: [
       {
         TITLE: "アクセシビリティとは",
+        LINK: "whatTo"
       },
       {
         TITLE: "WCAG",
+        LINK: "wcag"
       },
       {
         TITLE: "Webアクセシビリティに取り組む理由",

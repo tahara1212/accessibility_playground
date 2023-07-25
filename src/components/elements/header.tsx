@@ -1,5 +1,6 @@
+import NextLink from 'next/link'
 import { MAX_WIDTH, TITLE } from "@/const/util";
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 
 export const Header = () => {
   return (
@@ -12,9 +13,11 @@ export const Header = () => {
         justifyContent="end"
         marginX="auto"
       >
-        <Heading as="h1" size="md" color="whiteAlpha.800" pr={4}>
-          {TITLE}
-        </Heading>
+        <Link as={NextLink} href='/'>
+          <Heading as="h1" size="md" color="whiteAlpha.800" pr={4}>
+            {TITLE}
+          </Heading>
+        </Link>
       </Flex>
     </Box>
   );

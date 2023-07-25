@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import {
   Box,
   VStack,
@@ -10,14 +8,16 @@ import {
   Heading,
   calc,
 } from "@chakra-ui/react";
-import { NAVIGATION } from "@/const/navigation";
 import { Navigation } from "@/components/elements/navigation";
 import { Header } from "@/components/elements/header";
 import { HEADER_HEIGHT, MAX_WIDTH, TITLE } from "@/const/util";
+import { ReactNode } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+type Props = {
+  children: ReactNode
+}
 
-export default function Home() {
+export const Layout = ({children}: Props) => {
   return (
     <>
       <Head>
@@ -30,7 +30,7 @@ export default function Home() {
       <Box maxW={MAX_WIDTH} marginX="auto">
         <Flex>
           <Box as="main" w={`calc(70% - 100px)`} m={HEADER_HEIGHT}>
-            <p>main</p>
+            {children}
           </Box>
           <Navigation />
         </Flex>
