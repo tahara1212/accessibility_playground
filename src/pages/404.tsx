@@ -1,9 +1,10 @@
 import { Layout } from "@/components/layouts/layout";
 
-export default function WhatTo() {
-  return (
+export default function Custom404() {
+  return(
     <Layout>
-      <p>test</p>
+      404
     </Layout>
   )
 }
+

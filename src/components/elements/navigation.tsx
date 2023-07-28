@@ -1,12 +1,12 @@
 import NextLink from 'next/link'
 import { Box, VStack, Text, Divider, Flex, Link } from "@chakra-ui/react";
-import { NAVIGATION } from "@/const/navigation";
+import { navigationItems } from "@/const/navigationItems";
 import { HEADER_HEIGHT } from "@/const/util";
 import { useState } from "react";
 
 export const Navigation = () => {
   const [openList, setOpen] = useState(() => {
-    return NAVIGATION.map((v, i) => (i === 0 ? true : false));
+    return navigationItems.map((v, i) => (i === 0 ? true : false));
   });
 
   const onClickNavBtn = (index: number) => {
@@ -28,8 +28,8 @@ export const Navigation = () => {
         bgColor="blackAlpha.600"
       >
         <VStack w="100%" align="left" lineHeight="9" overflowY="scroll">
-          {NAVIGATION.map((nav, i) => (
-            <Box key={nav.CHAPTER}>
+          {navigationItems.map((nav, i) => (
+            <Box key={nav.chapter}>
               <Flex
                 alignItems="center"
                 fontSize="md"
@@ -39,17 +39,17 @@ export const Navigation = () => {
                 _hover={{ color: "whiteAlpha.800" }}
                 onClick={() => onClickNavBtn(i)}
               >
-                {nav.CHAPTER}
+                {nav.chapter}
               </Flex>
               {openList[i] &&
-                nav.LIST.map((list) => (
-                  <Link as={NextLink} key={list.TITLE} href={`/article/${list.LINK}`} _hover={{ opacity: "0.6", textDecoration: "none" }}>
+                nav.list.map((list) => (
+                  <Link as={NextLink} key={list.title} href={`/docs/${list.link}`} _hover={{ opacity: "0.6", textDecoration: "none" }}>
                     <Text
                       pl={2}
                       fontSize="sm"
                       color={openList[i] ? "white" : "gray.800"}
                     >
-                      {list.TITLE}
+                      {list.title}
                     </Text>
                   </Link>
                 ))}
