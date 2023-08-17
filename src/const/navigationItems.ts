@@ -7,11 +7,12 @@ export const navigationItems = [
         link: "whatTo"
       },
       {
-        title: "WCAG",
-        link: "wcag"
+        title: "障害補助とデバイス",
+        link: "device"
       },
       {
-        title: "Webアクセシビリティに取り組む理由",
+        title: "WCAG",
+        link: "wcag"
       },
     ],
   },

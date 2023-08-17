@@ -3,27 +3,25 @@ import { DocsDivider, DocsHeading2xl, DocsHeadingxl, DocsText, DocsUnderDivider 
 import { ArticleLayout } from "@/components/layouts/articleLayout";
 import { Layout } from "@/components/layouts/layout";
 import ReactMarkdown from 'react-markdown';
-import { heading, caption, text } from '@/data/whatToMd';
+import { heading, caption, text } from '@/data/wcag';
 
 
-export default function WhatTo() {
+export default function Wcag() {
   return (
     <Layout>
       <ArticleLayout heading={heading}>
       <DocsText><ReactMarkdown>{caption}</ReactMarkdown></DocsText>
       <DocsDivider />
-      <DocsHeading2xl>Webアクセシビリティ</DocsHeading2xl>
+      <DocsHeading2xl>4つの原則</DocsHeading2xl>
       <DocsText><ReactMarkdown>{text[1]}</ReactMarkdown></DocsText>
       <DocsDivider />
-      <DocsHeadingxl>障害について</DocsHeadingxl>
+      <DocsHeadingxl>ガイドライン</DocsHeadingxl>
       <DocsText><ReactMarkdown>{text[2]}</ReactMarkdown></DocsText>
       <DocsDivider />
-      <DocsHeadingxl>アクセシビリティに取り組む理由</DocsHeadingxl>
-      <DocsText><ReactMarkdown>{text[3]}</ReactMarkdown></DocsText>
-      </ArticleLayout>
+      <DocsHeadingxl>達成基準</DocsHeadingxl>
+      <DocsText><ReactMarkdown>{text[2]}</ReactMarkdown></DocsText>
       <DocsDivider />
-      <DocsHeadingxl>なぜWebアクセシビリティなのか</DocsHeadingxl>
-      <DocsText><ReactMarkdown>{text[4]}</ReactMarkdown></DocsText>
+      </ArticleLayout>
     </Layout>
   )
 }
